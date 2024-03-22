@@ -1,0 +1,43 @@
+.main_header{
+    background-image: url("/public/image/coffe_header.jpg");
+    width: 100%;
+    height: 500px;
+    background-position: left;
+    background-size: cover;
+    text-align: -webkit-center;
+}
+.header_left{
+    width: 36%;
+    vertical-align: middle;
+    text-align: right;
+    padding: 40px 0px 0px 0px;
+    align-items: center;
+    text-align: -webkit-right;
+}
+.header_left_title{
+    color: var(--mango);
+    vertical-align: middle;
+    font-size: 3.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.header_left_body{
+    color: var(--mango);
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 20px;
+}
+.header_btn{
+    text-align: center;
+    padding: 20px 0px;
+}
+.header_left_btn{
+    padding: 6px 15px;
+    font-size: 1.5rem;
+    width: 80%;
+    align-items: center;
+    background-color: var(--border);
+    color: var(--green);
+    border: none;
+    border-radius: 20px;
+}

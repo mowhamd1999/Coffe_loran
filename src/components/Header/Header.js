@@ -11,7 +11,7 @@ const Header = () => {
           <ul className="navbar_ul">
             <li className="navbar_li">
               <a>
-                <img className="navbar_logo" src="/logo.avif" />
+                <img className="navbar_logo" src="/image/logo.avif" />
               </a>
             </li>
             <li className="navbar_li">

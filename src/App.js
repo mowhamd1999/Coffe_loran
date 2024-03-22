@@ -1,11 +1,19 @@
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Test from "./redux/Test";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Main from './features/Main/Main'
+
 function App() {
   return (
     <div className="App">
-      {/* <Test /> */}
-      <Header />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/"  element = {<Main />}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

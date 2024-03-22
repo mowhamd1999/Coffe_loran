@@ -30,6 +30,7 @@
 .navbar_icon{
     font-size: 1rem;
     color: var(--text);
+    vertical-align: middle;
 }
 .navbar_menu{
     text-align: right;
@@ -56,7 +57,7 @@
 .menus_body{
     font-weight: 500;
     font-size: 0.7rem;
-    color: rgb(86, 86, 86);
+    color: rgb(124, 124, 124);
 }
 .navbar_menu ul li ul {
   width: auto;
@@ -64,11 +65,13 @@
   color: var(--text);
   box-shadow: 0px 1px 6px #e6e6e6;
   opacity: 0;
-  position: absolute;
+  display: block ;
+  position: absolute ;
   visibility: hidden;
   transition: all 0.4s ease-in-out;
   border-radius: 20px;
-  animation: spring 300ms ease-out;
+  z-index: 1;
+
 }
 .navbar_menu ul li ul li {
   list-style: none;
@@ -85,6 +88,7 @@
   color: var(--border);
   border-radius: 10px;
   align-content: center;
+  transition: 0.5s all;
 }
 .navbar_menu > ul > li:hover ul {
   opacity: 1;
