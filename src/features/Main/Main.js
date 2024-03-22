@@ -1,16 +1,24 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Main.css";
 import { getProducts } from "../../services/api";
+
 const Main = () => {
-  const [products , setProducts] = useState([])
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchAPI = async () => {
       setProducts(await getProducts());
-    }
-    fetchAPI()
-  }, [])
-  
-  // console.log(data) 
+    };
+    fetchAPI();
+  }, []);
+  // const data = new Set(products.map(item => item.category))
+  const newProducts = products.reduce((acc, cur) => {
+    return acc.find((item) => item.category == cur.category)
+      ? [...acc]
+      : [...acc, cur];
+  }, []);
+  console.log(newProducts);
+
+  // console.log(data)
   return (
     <div className="main_container">
       <div className="main_header">
@@ -26,7 +34,12 @@ const Main = () => {
       </div>
       <br />
       <div className="main_products">
-        
+        {newProducts.map((item) => (
+          <div className="products_image" style={{backgroundImage:`url(${item.image})`}}>
+            <p>{item.category}</p>
+            <p>{item.info}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
