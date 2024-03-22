@@ -1,13 +1,13 @@
-
-
 :root {
-    --background: #FBF6EE;
-    --mango: #E3E1D9;
-    --border: #C7C8CC;
-    --coffe: #B67352;
+  --background: #fbf6ee;
+  --mango: #ffb534;
+  --green: #65b741;
+  --coffe: #b67352;
+  --border: #fff2d8;
+  --text: #132043;
 }
-body{
-    background-color: var(--background);
-    width: 100%;
-    margin: 0px;
+body {
+  background-color: var(--background);
+  width: 100%;
+  margin: 0px;
 }

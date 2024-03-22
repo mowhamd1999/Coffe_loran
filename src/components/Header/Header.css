@@ -1,0 +1,96 @@
+.header_container {
+  height: 100px;
+  background-color: var(--background);
+  margin: 0px;
+  direction: rtl;
+  text-align: -webkit-center;
+}
+.header_navbar {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  height: auto;
+}
+.navbar_logo{
+  width: 50px;
+  background-color: inherit;
+  height: 50px;
+}
+.navbar_title{
+    font-size: 1rem;
+    padding-right: 25px;
+}
+.navbar_ul{
+    list-style: none;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.navbar_icon{
+    font-size: 1rem;
+    color: var(--text);
+}
+.navbar_menu{
+    text-align: right;
+}
+.ul{
+    direction: rtl;
+    text-align: right;
+    padding: 5px 10px;
+    width: auto;
+    margin-top: 10px;
+}
+.menu{
+    display: flex;
+}
+.menus{
+    border-left: 1px solid var(--coffe);
+    padding: 10px;
+    width: auto;
+}
+.menus_title{
+    font-weight: 600;
+    color: var(--text);
+}
+.menus_body{
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: rgb(86, 86, 86);
+}
+.navbar_menu ul li ul {
+  width: auto;
+  background: var(--background);
+  color: var(--text);
+  box-shadow: 0px 1px 6px #e6e6e6;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  border-radius: 20px;
+  animation: spring 300ms ease-out;
+}
+.navbar_menu ul li ul li {
+  list-style: none;
+}
+.navbar_menu ul li ul li a {
+  padding: 5px 20px;
+  display: block;
+  font-weight: 400;
+  font-size: 1rem;
+  direction: rtl;
+}
+.navbar_menu ul li ul li a:hover {
+  background: var(--coffe);
+  color: var(--border);
+  border-radius: 10px;
+  align-content: center;
+}
+.navbar_menu > ul > li:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+.navbar_login{
+  text-align: right;
+  display: flex;
+}
