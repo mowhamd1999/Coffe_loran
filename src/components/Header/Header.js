@@ -3,6 +3,7 @@ import "./Header.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header_container">
@@ -10,9 +11,9 @@ const Header = () => {
         <div className="navbar_menu">
           <ul className="navbar_ul">
             <li className="navbar_li">
-              <a>
+              <Link to='/'>
                 <img className="navbar_logo" src="/image/logo.avif" />
-              </a>
+              </Link>
             </li>
             <li className="navbar_li">
               <a className="navbar_title">
@@ -109,7 +110,9 @@ const Header = () => {
               </a>
             </li>
             <li className="navbar_title">
-              <a><CiSearch /></a>
+              <a>
+                <CiSearch />
+              </a>
             </li>
           </ul>
         </div>
