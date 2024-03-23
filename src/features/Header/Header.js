@@ -12,7 +12,7 @@ const Header = () => {
           <ul className="navbar_ul">
             <li className="navbar_li">
               <Link to='/'>
-                <img className="navbar_logo" src="/image/logo.avif" />
+                <img className="navbar_logo" src="/image/logo.png" />
               </Link>
             </li>
             <li className="navbar_li">

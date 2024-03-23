@@ -1,6 +1,6 @@
 import "./App.css";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
+import Header from './features/Header/Header'
+import Footer from "./features/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from './features/Main/Main'
 import Category from "./components/Category/Category";

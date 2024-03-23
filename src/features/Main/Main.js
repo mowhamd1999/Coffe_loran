@@ -4,11 +4,14 @@ import { getProducts } from "../../services/api";
 import { Link } from "react-router-dom";
 import { PiShootingStar } from "react-icons/pi";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Courseler from "../../components/Courseler/Courseler";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
+import CardProducts from "../../components/CardProducts/CardProducts";
+import { FaCoffee } from "react-icons/fa";
 const Main = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -24,34 +27,47 @@ const Main = () => {
       : [...acc, cur];
   }, []);
   console.log(newProducts);
-
+  const cardseller = products.filter((item) => item.category === "Toys");
   // console.log(data)
   return (
     <div className="main_container">
-      <div className="main_header">
+      {/* <div className="main_header">
         <div className="header_left">
-          <h1 className="header_left_title">دمی با کافه لوران</h1>
+          <h1 className="header_left_title">کافه لوران</h1>
           <h4 className="header_left_body">
-            یک جمعه تنهایی ات را به قهوه مهمان می کنم تلخ تلخ
+            بهترین قهوه در انتظار شماست
           </h4>
           <div className="header_btn">
             <button className="header_left_btn">کافه لوران</button>
           </div>
         </div>
+      <div className="header_image">
+        <img className="image_header" src="image/mohammad-headerr.jpg" />
       </div>
+      </div> */}
+      <Courseler />
       <br />
-      <div className="main_products">
-        {newProducts.map((item) => (
-          <Link className="main_link_product" to={`/category/${item.category}`}>
-            <div
-              className="products_image"
-              style={{ backgroundImage: `url(${item.image})` }}
+      <div className="center">
+        <div className="main_card_title">
+          <FaCoffee className="main_card_icon" />
+          <p className="main_cards_title">دسته بندی ها</p>
+        </div>
+        <div className="main_products">
+          {newProducts.map((item) => (
+            <Link
+              className="main_link_product"
+              to={`/category/${item.category}`}
             >
-              <p className="product_category">{item.category}</p>
-              <p className="product_info">{item.info}</p>
-            </div>
-          </Link>
-        ))}
+              <div
+                className="products_image"
+                style={{ backgroundImage: `url(${item.image})` }}
+              >
+                <p className="product_category">{item.category}</p>
+                <p className="product_info">{item.info}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
       <div className="center">
         <div className="main_favorite">
@@ -66,17 +82,15 @@ const Main = () => {
       <div className="center">
         <div className="main_favorite_logo">
           <Swiper
-            slidesPerView={6}
-            spaceBetween={-300}
-            pagination={{
-              clickable: true,
-            }}
+            slidesPerView={10}
+            spaceBetween={1}
+            
             breakpoints={{
               "@0.00": {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 1,
               },
-              "@0.75": {
+              "@1": {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
@@ -87,6 +101,22 @@ const Main = () => {
               "@1.50": {
                 slidesPerView: 4,
                 spaceBetween: 50,
+              },
+              "@2": {
+                slidesPerView: 5,
+                spaceBetween: 75,
+              },
+              "@2.50": {
+                slidesPerView: 6,
+                spaceBetween: 100,
+              },
+              "@2.50": {
+                slidesPerView: 7,
+                spaceBetween: 100,
+              },
+              "@2.50": {
+                slidesPerView: 8,
+                spaceBetween: 100,
               },
             }}
             modules={[Pagination]}
@@ -174,6 +204,17 @@ const Main = () => {
               </Link>
             </SwiperSlide>
           </Swiper>
+        </div>
+      </div>
+      <div className="center">
+        <div className="main_card_title">
+          <FaCoffee className="main_card_icon" />
+          <p className="main_cards_title">پرفروش ترین ها</p>
+        </div>
+        <div className="main_card_body">
+          {cardseller.map((item) => (
+            <CardProducts {...item} />
+          ))}
         </div>
       </div>
     </div>

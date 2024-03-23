@@ -10,15 +10,21 @@
   width: 70%;
   justify-content: space-between;
   height: auto;
+  padding-top: 10px;
 }
 .navbar_logo{
-  width: 50px;
+  width: 100px;
   background-color: inherit;
-  height: 50px;
+  height: 70px;
+  list-style: none;
+  text-decoration: none;
 }
 .navbar_title{
     font-size: 1rem;
     padding-right: 25px;
+    text-decoration: none;
+    list-style: none;
+    color: var(--text);
 }
 .navbar_ul{
     list-style: none;
