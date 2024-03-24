@@ -1,0 +1,97 @@
+@import '//codepen.io/chrisdothtml/pen/ojLzJK.css';
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fa {
+  transform: scale(0.8);
+}
+.social-btns .btn.twiter:before {
+  background-color: #3b5998;
+}
+.social-btns .btn.twiter .fa {
+  color: #3b5998;
+}
+.social-btns .btn.whatsapp:before {
+  background-color: rgb(39, 199, 39);
+}
+.social-btns .btn.whatsapp .fa {
+  color: rgb(39, 199, 39);
+}
+.social-btns .btn.instagram:before {
+  background-color: #dc4a38;
+}
+.social-btns .btn.instagram .fa {
+  color: #dc4a38;
+}
+.social-btns .btn.dribbble:before {
+  background-color: #f26798;
+}
+.social-btns .btn.dribbble .fa {
+  color: #f26798;
+}
+.social-btns .btn.telegram:before {
+  background-color: #00aff0;
+  color: var(--backround);
+}
+.social-btns .btn.telegram .fa {
+  color: #00aff0;
+  position: absolute;
+}
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  transform: scale(1);
+}
+.social-btns {
+  height: 90px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+}
+.social-btns .btn {
+  display: inline-flex;
+  z-index: 1;
+
+  background-color: var(--coffe);
+  width: 40px;
+  height: 40px;
+  line-height: 90px;
+  margin: 5px 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px 10px rgba(0,0,0,0.1);
+  opacity: 0.99;
+  justify-content: center;
+}
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.social-btns .btn .fa {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    display: block;
+    z-index: 1;
+    text-align: center;
+}
