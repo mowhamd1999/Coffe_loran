@@ -12,6 +12,14 @@
   height: auto;
   padding-top: 10px;
 }
+.navbar_title:hover{
+  list-style: none;
+  text-decoration: none;
+}
+.menus_title,.menus_body{
+  list-style: none;
+  text-decoration: none;
+}
 .navbar_logo{
   width: 100px;
   background-color: inherit;
@@ -95,10 +103,14 @@
   border-radius: 10px;
   align-content: center;
   transition: 0.5s all;
+  list-style: none;
+  text-decoration: none;
 }
 .navbar_menu > ul > li:hover ul {
   opacity: 1;
   visibility: visible;
+  list-style: none;
+  text-decoration: none;
 }
 .navbar_login{
   text-align: right;

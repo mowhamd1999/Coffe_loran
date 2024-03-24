@@ -3,7 +3,7 @@ import Header from './features/Header/Header'
 import Footer from "./features/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from './features/Main/Main'
-import Category from "./components/Category/Category";
+import Category from './features/Category/Category'
 function App() {
   return (
     <div className="App">

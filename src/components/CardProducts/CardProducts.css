@@ -2,6 +2,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
   height: auto;
+  margin: 15px;
 }
 .Card_link {
   list-style: none;
@@ -14,4 +15,7 @@
 }
 .Card_container:hover {
   box-shadow: none;
+}
+.active{
+  color: var(--green);
 }
