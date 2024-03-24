@@ -7,6 +7,11 @@
   list-style: none;
   text-decoration: none;
 }
-.Card_container:hover{
-    box-shadow: none;
+.Card_link:hover {
+  list-style: none;
+  text-decoration: none;
+  color: var(--text);
+}
+.Card_container:hover {
+  box-shadow: none;
 }
