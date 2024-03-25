@@ -1,0 +1,26 @@
+.tab_head{
+    color: var(--text);
+}
+.tab_body{
+    color: var(--text);
+    direction: rtl;
+}
+.tab_body_info{
+    display: flex;
+    justify-content: right;
+    direction: rtl;
+    text-align: right;
+    margin: 10px 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid rgb(225, 225, 225);
+    width: 95%;
+}
+.tab_span{
+    width: 50%;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+}
+.tab_body_body{
+    padding: 20px;
+}

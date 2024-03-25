@@ -6,6 +6,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { LuSendToBack } from "react-icons/lu";
 import { AiOutlineSafety } from "react-icons/ai";
+import ProductTab from "../../components/ProductTab/ProductTab";
 const Product = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -82,12 +83,14 @@ const Product = () => {
                 <div className="product_body_info">
                   <AiOutlineSafety className="product_body_icon" />
                   <p>
-                    &nbsp;&nbsp;&nbsp; ارسال مرسوله های بالاتر از 500 هزار تومان
-                    فقط در شهر تهران رایگان خواهد بود
+                    &nbsp;&nbsp;&nbsp; خرید آنلاین با استفاده از درگاه های امن{" "}
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="product_tabs">
+            <ProductTab {...product} />
           </div>
         </div>
       ))}

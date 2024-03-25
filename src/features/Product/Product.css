@@ -5,14 +5,13 @@
 }
 .product_container{
     justify-content: space-around;
-    width: 100%;
+    width: 70%;
     direction: rtl;
-    display: flex;
+    display: block;
 }
 .product_head{
     display: flex;
     justify-content: space-around;
-    width: 70%;
     margin-top: 50px;
 }
 .product_head_img{
@@ -93,4 +92,7 @@
 }
 .product_body_icon{
     font-size: 1.5rem;
+}
+.product_tabs{
+    margin: 100px 0px;
 }
