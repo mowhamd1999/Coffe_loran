@@ -2,12 +2,13 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Link } from "react-router-dom";
-import './CardProducts.css'
+import "./CardProducts.css";
 const CardProducts = (props) => {
+  console.log(props);
   return (
     <div className="Card_container">
-      <Link className="Card_link" to={`/category/${props.category}`}>
-        <Card style={{ width: "18rem" , width:'250px' }}>
+      <Link className="Card_link" to={`/category/${props.category}/${props.name}`}>
+        <Card style={{ width: "18rem", width: "250px" }}>
           <Card.Img variant="top" src={props.image} />
           <Card.Body>
             <Card.Title>{props.name}</Card.Title>

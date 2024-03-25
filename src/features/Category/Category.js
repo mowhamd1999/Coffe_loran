@@ -18,7 +18,8 @@ const Category = () => {
   const product = products.filter(
     (item) => item.category === category.category
   );
-  console.log(product);
+
+  console.log(`/category/${product.category}/${product.name}`);
   return (
     <div className="category_main">
       <div className="category_header">
