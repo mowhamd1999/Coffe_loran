@@ -11,17 +11,17 @@
 }
 .contact_header{
     font-size: 1.7rem;
-    color: #647403;
+    color: var(--mango);
     font-weight: 500;
     width: 100%;
-    border-bottom: 2px solid #647403;
+    border-bottom: 2px solid var(--mango);
     padding-bottom: 20px;
     margin-bottom: 30px;
 }
 .contact_body{
     display: flex;
     justify-content: center;
-    box-shadow: 10px 5px 8px 10px rgba(128, 138, 103, 0.2), 0 6px 20px 0 rgba(184, 191, 140, 0.19);
+    box-shadow: 10px 5px 8px 10px rgba(64, 34, 15, 0.2), 0 6px 20px 0 rgba(184, 191, 140, 0.19);
 }
 .contact_form{
     width: 70%;
@@ -35,18 +35,18 @@
     
 }
 .contact_forom_header{
-    color: #647403;
+    color: var(--mango);
     font-weight: 400;
 }
 .contact_info{
     width: 30%;
-    background-color: #647403;
+    background-color: var(--coffe);
     padding: 40px;
 }
 .contact_form_input{
     width: 48%;
     display: grid;
-    border-bottom: 1px solid #647403;
+    border-bottom: 1px solid var(--mango);
     margin: 10px 0px 50px;
 }
 .form_label{
@@ -76,7 +76,7 @@
     min-height: 100px;
     background-color: inherit;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--mango);
     margin: 30px 0px;
     font-weight: 600;
     max-height: 110px;
@@ -88,17 +88,17 @@
     border-radius: 5px;
     font-size: 1.2rem;
     font-weight: 600;
-    background-color: #647403;
+    background-color: var(--mango);
     color: #f9f7eb;
     outline: none;
     border: none;
     cursor: pointer;
-    border: 1px solid #647403;
+    border: 1px solid var(--mango);
 }
 .form_btn:hover{
-    background-color: #f9f7eb;
-    color: #647403;
-    border: 1px solid #647403;
+    background-color: var(--coffe);
+    color: var(--text);
+    border: 1px solid var(--coffe);
 }
 .contact_info_body{
     text-align: right;
@@ -115,6 +115,7 @@
 .info_icon{
     color: white;
     font-size: 1.3rem;
+    margin-left: 10px;
     margin-right: 10px;
 }
 .info_content{
@@ -125,4 +126,8 @@
     margin: 30px 0px;
     color: #f9f7eb;
     font-weight: 300;
+}
+.info_p{
+    display: contents;
+    margin-right: 10px;
 }

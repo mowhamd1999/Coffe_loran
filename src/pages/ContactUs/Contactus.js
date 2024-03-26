@@ -80,15 +80,15 @@ const Contactus = () => {
               </p>
               <div className="info_content">
                 <FaLocationDot className="info_icon" />
-                <p>تهران شهریار شهرک وایین میلاد ۳ پلاک ۲۰</p>
+                <p className="info_p">تهران شهریار شهرک وایین میلاد ۳ پلاک ۲۰</p>
               </div>
               <div className="info_content">
                 <FaPhoneAlt className="info_icon" />
-                <p>+1(291) 0991 9695</p>
+                <p className="info_p">+1(291) 0991 9695</p>
               </div>
               <div className="info_content">
                 <IoMdMail className="info_icon" />
-                <p>info@mywebsite.com</p>
+                <p className="info_p">info@mywebsite.com</p>
               </div>
             </div>
           </div>
