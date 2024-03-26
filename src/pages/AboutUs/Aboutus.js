@@ -18,7 +18,6 @@ const Aboutus = () => {
             ipsa voluptates numquam saepe tempora recusandae tenetur, dolorem ab
             deleniti quisquam. Quas.
           </p>
-          <button className="about_btn">تماس با ما</button>
         </div>
         <div className="about_image">
           <img src="/image/coffe_about.jpg" className="about_image_img" />
@@ -32,7 +31,12 @@ const Aboutus = () => {
                 <hr />
               </div>
               <div className="items price">
-                <p className="old">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum libero dolorem harum corrupti iure, consectetur cum, veritatis illum perferendis vel beatae nam voluptatibus ut sed laborum nisi ab? Animi, provident.</p>
+                <p className="old">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Dolorum libero dolorem harum corrupti iure, consectetur cum,
+                  veritatis illum perferendis vel beatae nam voluptatibus ut sed
+                  laborum nisi ab? Animi, provident.
+                </p>
               </div>
             </div>
           </div>
@@ -44,7 +48,14 @@ const Aboutus = () => {
                 <hr />
               </div>
               <div className="items price">
-                <p className="old">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus architecto, corporis accusantium adipisci dignissimos illo temporibus, fuga a, earum numquam aut. Officiis consectetur delectus blanditiis consequatur perferendis mollitia a quidem. Nemo, minus! Ipsam consequuntur eveniet nemo voluptas quam aliquid blanditiis.</p>
+                <p className="old">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Possimus architecto, corporis accusantium adipisci dignissimos
+                  illo temporibus, fuga a, earum numquam aut. Officiis
+                  consectetur delectus blanditiis consequatur perferendis
+                  mollitia a quidem. Nemo, minus! Ipsam consequuntur eveniet
+                  nemo voluptas quam aliquid blanditiis.
+                </p>
               </div>
             </div>
           </div>
@@ -56,11 +67,17 @@ const Aboutus = () => {
                 <hr />
               </div>
               <div className="items price">
-                <p className="old">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi deleniti a consectetur voluptatum architecto maxime.</p>
+                <p className="old">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  deleniti a consectetur voluptatum architecto maxime.
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="about_linked">
+        <button className="about_btn">تماس با ما</button>
       </div>
     </div>
   );
