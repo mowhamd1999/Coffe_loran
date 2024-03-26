@@ -92,12 +92,14 @@ const Header = () => {
               </ul>
             </li>
             <li className="navbar_li">
-              <Link className="link" to='/about-us'>
+              <Link className="link" to="/about-us">
                 <a className="navbar_title">درباره ما</a>
               </Link>
             </li>
             <li className="navbar_li">
-              <a className="navbar_title">ارتباط با ما</a>
+              <Link className="link" to='/contact-us'>
+                <a className="navbar_title">ارتباط با ما</a>
+              </Link>
             </li>
           </ul>
         </div>

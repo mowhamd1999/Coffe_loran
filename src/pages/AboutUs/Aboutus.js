@@ -1,5 +1,6 @@
 import React from "react";
 import "./Aboutus.css";
+import { Link } from "react-router-dom";
 const Aboutus = () => {
   return (
     <div className="aboutus">
@@ -77,7 +78,9 @@ const Aboutus = () => {
         </div>
       </div>
       <div className="about_linked">
-        <button className="about_btn">تماس با ما</button>
+        <Link className='link' to='/contact-us' >
+          <button className="about_btn">تماس با ما</button>
+        </Link>
       </div>
     </div>
   );
