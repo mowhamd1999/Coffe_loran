@@ -43,7 +43,7 @@
 .link:hover {
   text-decoration: none;
   list-style: none;
-  color: var(--mango);
+  color: var(--green);
 }
 .enamad{
     width: 20%;
@@ -56,7 +56,7 @@
 .footer_last{
     width: 100%;
     height: 100px;
-    background-color: var(--text);
+    background-color: var(--background);
     justify-tracks: center;
     text-align: center;
     color: var(--mango);

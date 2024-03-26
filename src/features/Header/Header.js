@@ -11,7 +11,7 @@ const Header = () => {
         <div className="navbar_menu">
           <ul className="navbar_ul">
             <li className="navbar_li">
-              <Link to='/'>
+              <Link to="/">
                 <img className="navbar_logo" src="/image/logo.png" />
               </Link>
             </li>
@@ -92,7 +92,9 @@ const Header = () => {
               </ul>
             </li>
             <li className="navbar_li">
-              <a className="navbar_title">درباره ما</a>
+              <Link className="link" to='/about-us'>
+                <a className="navbar_title">درباره ما</a>
+              </Link>
             </li>
             <li className="navbar_li">
               <a className="navbar_title">ارتباط با ما</a>
