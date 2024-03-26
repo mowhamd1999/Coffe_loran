@@ -96,3 +96,17 @@
 .product_tabs{
     margin: 100px 0px;
 }
+.product_more_title{
+    text-align: center;
+    border-bottom: 1px solid var(--coffe);
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 20px 0px;
+}
+.product_more{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0px 100px 0px;
+}

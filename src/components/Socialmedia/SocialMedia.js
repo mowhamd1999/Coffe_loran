@@ -7,24 +7,24 @@ import { CiTwitter } from "react-icons/ci";
 const SocialMedia = () => {
   return (
     <div>
-      <div class="social-btns">
-        <a class="btn telegram" href="#">
-          <i class="fa fa-telegram">
+      <div className="social-btns">
+        <a className="btn telegram" href="#">
+          <i className="fa fa-telegram">
             <FaTelegramPlane className="icon" />
           </i>
         </a>
-        <a class="btn whatsapp" href="#">
-          <i class="fa fa-whatsapp">
+        <a className="btn whatsapp" href="#">
+          <i className="fa fa-whatsapp">
             <SiWhatsapp className="icon" />
           </i>
         </a>
-        <a class="btn instagram" href="#">
-          <i class="fa fa-instagram">
+        <a className="btn instagram" href="#">
+          <i className="fa fa-instagram">
             <SlSocialInstagram className="icon" />
           </i>
         </a>
-        <a class="btn twiter" href="#">
-          <i class="fa fa-twiter">
+        <a className="btn twiter" href="#">
+          <i className="fa fa-twiter">
             <CiTwitter className="icon" />
           </i>
         </a>

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { LuSendToBack } from "react-icons/lu";
 import { AiOutlineSafety } from "react-icons/ai";
 import ProductTab from "../../components/ProductTab/ProductTab";
+import CardProducts from "./../../components/CardProducts/CardProducts";
 const Product = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -17,16 +18,17 @@ const Product = () => {
   }, []);
   const data = useParams();
   const product = products.filter((item) => item.name === data.name);
-  console.log(product);
+  const datas = products.filter((item) => item.category == product[0].category);
+
   return (
     <div className="product">
       {product.map((item) => (
-        <div className="product_container">
+        <div className="product_container" key={item.id}>
           <div className="product_head">
             <div className="product_head_img">
               <img className="product_head_image" src={item.image} alt="" />
             </div>
-            <div className="product_head_info">
+            <div className="product_head_info" id="main">
               <div className="breadcrumb">
                 <ul className="breadcrumb">
                   <Link className="product_breadcrumb_link" to="/">
@@ -91,6 +93,14 @@ const Product = () => {
           </div>
           <div className="product_tabs">
             <ProductTab {...product} />
+          </div>
+          <div className="product_more">
+            <h2 className="product_more_title">محصولات مرتبط</h2>
+            <div className="product_more">
+              {datas.map((item) => (
+                <CardProducts {...item} key={item.id} />
+              ))}
+            </div>
           </div>
         </div>
       ))}
