@@ -4,7 +4,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { Link } from "react-router-dom";
 import "./CardProducts.css";
 const CardProducts = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="Card_container">
       <Link className="Card_link" to={`/category/${props.category}/${props.name}`}>

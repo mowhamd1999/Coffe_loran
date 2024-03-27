@@ -8,6 +8,10 @@ import { LuSendToBack } from "react-icons/lu";
 import { AiOutlineSafety } from "react-icons/ai";
 import ProductTab from "../../components/ProductTab/ProductTab";
 import CardProducts from "./../../components/CardProducts/CardProducts";
+import { addToCard } from "../../redux/ReduxShop/Reducer";
+// import { connect, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+///
 const Product = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -19,7 +23,14 @@ const Product = () => {
   const data = useParams();
   const product = products.filter((item) => item.name === data.name);
   const datas = products.filter((item) => item.category == product[0].category);
-
+  ///
+  const dispatch = useDispatch();
+  const cart = useSelector(state => state.state);
+  console.log(cart)
+  const handlerAddToCart =(item) => {
+    // console.log(item)
+  }
+  ///
   return (
     <div className="product">
       {product.map((item) => (
@@ -64,7 +75,13 @@ const Product = () => {
                   <span className="product_handler_counter">1</span>
                   <button className="product_handler_btn">+</button>
                 </div>
-                <button className="buy_btn">افزودن به سبد خرید</button>
+                <button
+                  className="buy_btn"
+                  onClick={() => handlerAddToCart(item)}
+                  value={item}
+                >
+                  افزودن به سبد خرید
+                </button>
               </div>
               <hr style={{ margin: "0px 20px 0px 20px" }} />
               <div className="product_head_body">

@@ -45,7 +45,8 @@ const Main = () => {
         <img className="image_header" src="image/mohammad-headerr.jpg" />
       </div>
       </div> */}
-      <Courseler />
+      {/* <Courseler /> */}
+      <img className="main_image_image" src="/image/main.jpg" alt="" />
       <br />
       <div className="center">
         <div className="main_card_title">
