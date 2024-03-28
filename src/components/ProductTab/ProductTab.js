@@ -3,7 +3,7 @@ import "./ProductTab.css";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 const ProductTab = (props) => {
-  const data = props[0]
+  const data = props
   return (
     <div>
       <Tabs

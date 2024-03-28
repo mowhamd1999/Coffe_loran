@@ -7,7 +7,7 @@ const CardProducts = (props) => {
   // console.log(props);
   return (
     <div className="Card_container">
-      <Link className="Card_link" to={`/category/${props.category}/${props.name}`}>
+      <Link className="Card_link" to={`/category/${props.category}/${props.id}`}>
         <Card style={{ width: "18rem", width: "250px" }}>
           <Card.Img variant="top" src={props.image} />
           <Card.Body>

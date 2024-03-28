@@ -1,22 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  counter: "",
-  state: [],
+  products: [],
   total: 0,
 };
+const createProduct = (item) => {
+  return {
+    productData:item.data,
+    totalPrice : item.data.price * item.counter,
+    quantity : item.counter 
+  }
+}
 const addToShopReducer = createSlice({
   name: "shop",
   initialState,
   reducers: {
-    addToCard(state, action) {
-      const check = state.state.findIndex(item => item.id === action.payload.id)
-      if(check !== -1){
-        state.state[check].quantity += action.payload.quantity
-      }else{
-        state.list.push(action.payload)
-      }
+    addProduct(state, action) {
+      
+      state.products.push(createProduct(action.payload))
     },
   },
 });
-export const { addToCard } = addToShopReducer.actions;
+export const {addProduct} = addToShopReducer.actions;
 export default addToShopReducer.reducer;

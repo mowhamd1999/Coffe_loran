@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/category/:category" element={<Category />} />
-            <Route path="/category/:category/:name" element={<Product />} />
+            <Route path="/category/:category/:id" element={<Product />} />
             <Route path="/about-us" element={<Aboutus />} />
             <Route path="/contact-us" element={<Contactus />} />
           </Routes>
