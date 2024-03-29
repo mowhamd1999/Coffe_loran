@@ -10,6 +10,7 @@ import Contactus from "./pages/ContactUs/Contactus";
 ///redux
 import store from "./redux/store";
 import { Provider } from "react-redux";
+import Shop from "./features/Shop/Shop";
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
             <Route path="/category/:category/:id" element={<Product />} />
             <Route path="/about-us" element={<Aboutus />} />
             <Route path="/contact-us" element={<Contactus />} />
+            <Route path="/shop" element={<Shop />} />
           </Routes>
           <Footer />
         </Provider>

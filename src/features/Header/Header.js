@@ -4,7 +4,11 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Header = () => {
+  const cart = useSelector((state) => state.productsState);
+  const productLenght = cart.products.length;
+  // console.log(productLenght)
   return (
     <div className="header_container">
       <div className="header_navbar">
@@ -97,7 +101,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="navbar_li">
-              <Link className="link" to='/contact-us'>
+              <Link className="link" to="/contact-us">
                 <a className="navbar_title">ارتباط با ما</a>
               </Link>
             </li>
@@ -110,7 +114,10 @@ const Header = () => {
             </li>
             <li className="navbar_title">
               <a>
-                <FaCartShopping />
+                <span className="item_shop_lengh">{productLenght}</span>
+                <Link to='/shop' className="link" >
+                  <FaCartShopping />
+                </Link>
               </a>
             </li>
             <li className="navbar_title">
