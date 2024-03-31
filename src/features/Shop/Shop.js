@@ -49,7 +49,7 @@ const Shop = () => {
                         />
                       </td>
                     </div>
-                    <td style={{fontSize:'1rem'}}>{item.productData.name}</td>
+                    <td style={{fontSize:'1rem' , color:'var(--coffe)'}}>{item.productData.name}</td>
                     <td>{item.productData.price} تومان</td>
                     <td>
                       <div className="product_buy_handler">

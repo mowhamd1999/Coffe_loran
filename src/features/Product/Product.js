@@ -9,7 +9,8 @@ import { AiOutlineSafety } from "react-icons/ai";
 import ProductTab from "../../components/ProductTab/ProductTab";
 import CardProducts from "./../../components/CardProducts/CardProducts";
 import { addProduct } from "../../redux/ReduxShop/Reducer";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 
 const Product = () => {
@@ -24,6 +25,9 @@ const Product = () => {
     };
     fetchAPI();
   }, []);
+
+  const notify = () => toast("Wow so easy!");
+
   ///
   const [isPending, setIsPending] = useState(true);
   const data = useParams();
@@ -93,7 +97,10 @@ const Product = () => {
               <button
                 className="buy_btn"
                 value={product}
-                onClick={() => dispatch(addProduct({ counter, data: product }))}
+                onClick={() => {
+                  dispatch(addProduct({ counter, data: product }));
+                  setCounter(1);
+                }}
               >
                 افزودن به سبد خرید
               </button>
@@ -135,6 +142,19 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition="Bounce"
+      />
     </div>
   );
 };
