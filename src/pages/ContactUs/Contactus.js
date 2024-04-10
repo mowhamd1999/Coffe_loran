@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Contactus.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import emailjs from '@emailjs/browser';
 const Contactus = () => {
+  const form = useRef();
+  const [data, setData] = useState({
+    username: "",
+    email: "",
+    number: "",
+    message: "",
+    id: Math.floor(Math.random() * 1000),
+  });
+  const [mail , setMail] = useState()
+  const changeHandler = (event) => {
+    setData({ ...data, [event.target.name]: event.target.value });
+  };
+  const submitHandler = (event) => {
+    event.preventDefault();
+    setMail(data)
+    emailjs
+      .sendForm('service_y3lya5s', 'template_7bgpdvt', form.current, {
+        publicKey: 'CM7g-qRnf8GOuVEgO',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+    setData({
+      username: "",
+      email: "",
+      number: "",
+      message: "",
+    });
+    console.log(data);
+  };
   return (
     <div className="contactus">
       <div className="contactus_all">
@@ -14,7 +50,7 @@ const Contactus = () => {
           <div className="contact_form">
             <h2 className="contact_forom_header">پیامی برای ما بگذارید</h2>
             <div className="contact_form_body">
-              <form action="submit" className="form">
+              <form ref={form} onSubmit={submitHandler} className="form">
                 <div className="contact_form_input">
                   <label className="form_label">نام و نام خانوادگی *</label>
                   <input
@@ -22,9 +58,9 @@ const Contactus = () => {
                     type="text"
                     placeholder="محمد رضا لک"
                     required
-                    //   onChange={nameHandler}
-                    //   value={contact.name}
-                    name="name"
+                    onChange={changeHandler}
+                    value={data.username}
+                    name="username"
                   />
                 </div>
                 <div className="contact_form_input">
@@ -33,8 +69,8 @@ const Contactus = () => {
                     className="form_input"
                     type="text"
                     placeholder="ایمیل"
-                    //   value={contact.email}
-                    //   onChange={nameHandler}
+                    value={data.email}
+                    onChange={changeHandler}
                     name="email"
                   />
                 </div>
@@ -43,8 +79,8 @@ const Contactus = () => {
                   <input
                     className="form_input"
                     type="text"
-                    //   value={contact.number}
-                    //   onChange={nameHandler}
+                    value={data.number}
+                    onChange={changeHandler}
                     name="number"
                     placeholder="۰۹۱۲۱۲۳۴۵۶۷"
                   />
@@ -56,18 +92,12 @@ const Contactus = () => {
                     type=""
                     placeholder="پیام را در این فیلد بنویسید"
                     required
-                    //   value={contact.message}
-                    //   onChange={nameHandler}
+                    value={data.message}
+                    onChange={changeHandler}
                     name="message"
                   />
                 </div>
-                <button
-                  className="form_btn"
-                  type="submit"
-                  // onClick={submitHandler}
-                >
-                 ارسال
-                </button>
+                <input className="form_btn" value='ارسال' type='submit' />
               </form>
             </div>
           </div>
@@ -80,7 +110,9 @@ const Contactus = () => {
               </p>
               <div className="info_content">
                 <FaLocationDot className="info_icon" />
-                <p className="info_p">تهران شهریار شهرک وایین میلاد ۳ پلاک ۲۰</p>
+                <p className="info_p">
+                  تهران شهریار شهرک وایین میلاد ۳ پلاک ۲۰
+                </p>
               </div>
               <div className="info_content">
                 <FaPhoneAlt className="info_icon" />

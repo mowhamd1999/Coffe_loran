@@ -28,7 +28,7 @@ const Aboutus = () => {
             <div className="overlay">
               <div className="items"></div>
               <div className="items head">
-                <p>کافه لوران</p>
+                <h2>کافه لوران</h2>
                 <hr />
               </div>
               <div className="items price">
@@ -64,7 +64,7 @@ const Aboutus = () => {
             <div className="overlay">
               <div className="items"></div>
               <div className="items head">
-                <p>قهوه لوران</p>
+                <h2>قهوه لوران</h2>
                 <hr />
               </div>
               <div className="items price">
