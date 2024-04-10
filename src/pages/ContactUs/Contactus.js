@@ -3,46 +3,45 @@ import "./Contactus.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast, Bounce, Zoom } from "react-toastify";
 const Contactus = () => {
   const form = useRef();
-  const [data, setData] = useState({
-    username: "",
-    email: "",
-    number: "",
-    message: "",
-    id: Math.floor(Math.random() * 1000),
-  });
-  const [mail , setMail] = useState()
-  const changeHandler = (event) => {
-    setData({ ...data, [event.target.name]: event.target.value });
-  };
   const submitHandler = (event) => {
     event.preventDefault();
-    setMail(data)
     emailjs
-      .sendForm('service_y3lya5s', 'template_7bgpdvt', form.current, {
-        publicKey: 'CM7g-qRnf8GOuVEgO',
+      .sendForm("service_y3lya5s", "template_7bgpdvt", form.current, {
+        publicKey: "CM7g-qRnf8GOuVEgO",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log("SUCCESS!");
+          <ToastContainer />;
+          toast.success("پیام شما با موفقیت ارسال شد", {
+            theme: "dark",
+            position: "top-center",
+            autoClose: 3000,
+            transition: Zoom,
+            rtl: true,
+          });
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          <ToastContainer />;
+          toast.error("ارسال پیام شما با مشکل مواجه شد لطفا دوباره تلاش کنید", {
+            theme: "dark",
+            position: "top-center",
+            autoClose: 3000,
+            transition: Zoom,
+            rtl: true,
+          });
+          console.log("FAILED...", error.text);
+        }
       );
-    setData({
-      username: "",
-      email: "",
-      number: "",
-      message: "",
-    });
-    console.log(data);
   };
   return (
     <div className="contactus">
       <div className="contactus_all">
+        <ToastContainer />
         <div className="contact_header">
           <h1>تماس با ما</h1>
         </div>
@@ -58,9 +57,7 @@ const Contactus = () => {
                     type="text"
                     placeholder="محمد رضا لک"
                     required
-                    onChange={changeHandler}
-                    value={data.username}
-                    name="username"
+                    name="user_name"
                   />
                 </div>
                 <div className="contact_form_input">
@@ -69,9 +66,7 @@ const Contactus = () => {
                     className="form_input"
                     type="text"
                     placeholder="ایمیل"
-                    value={data.email}
-                    onChange={changeHandler}
-                    name="email"
+                    name="user_email"
                   />
                 </div>
                 <div className="contact_form_input">
@@ -79,9 +74,7 @@ const Contactus = () => {
                   <input
                     className="form_input"
                     type="text"
-                    value={data.number}
-                    onChange={changeHandler}
-                    name="number"
+                    name="user_number"
                     placeholder="۰۹۱۲۱۲۳۴۵۶۷"
                   />
                 </div>
@@ -92,12 +85,10 @@ const Contactus = () => {
                     type=""
                     placeholder="پیام را در این فیلد بنویسید"
                     required
-                    value={data.message}
-                    onChange={changeHandler}
                     name="message"
                   />
                 </div>
-                <input className="form_btn" value='ارسال' type='submit' />
+                <input className="form_btn" value="ارسال" type="submit" />
               </form>
             </div>
           </div>
