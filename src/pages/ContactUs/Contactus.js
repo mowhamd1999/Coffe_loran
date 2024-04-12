@@ -4,7 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast, Bounce, Zoom } from "react-toastify";
+import { ToastContainer, toast, Zoom } from "react-toastify";
 const Contactus = () => {
   const form = useRef();
   const submitHandler = (event) => {
