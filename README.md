@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Coffee Website
 
 This repository contains the source code for a Coffee Website created using JavaScript, React, and Redux. The website includes features such as a store for purchasing coffee products.
 
