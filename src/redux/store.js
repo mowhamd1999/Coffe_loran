@@ -3,7 +3,6 @@ import addToCard from './ReduxShop/Reducer'
 const store = configureStore({
     reducer: {
         productsState : addToCard,
-        
     }
 })
 export default store
