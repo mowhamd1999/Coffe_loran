@@ -28,13 +28,17 @@ This will open the Coffee Website in your default web browser.
 ## Features
 
 . Store: Browse and purchase coffee products from the online store.
+
 . React Components: Utilizes React components for a dynamic and interactive user interface.
+
 . Redux State Management: Manages application state using Redux for predictable state management.
+
 . JavaScript: Written primarily in JavaScript for client-side functionality.
+
 
 ## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
 
-hope you like it :)
+hope you like it :))
