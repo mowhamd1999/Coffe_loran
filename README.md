@@ -25,7 +25,6 @@ npm start
 This will open the Coffee Website in your default web browser.
 
 
-
 ## Features
 
 . Store: Browse and purchase coffee products from the online store.
