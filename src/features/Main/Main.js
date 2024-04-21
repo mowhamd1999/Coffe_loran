@@ -31,21 +31,6 @@ const Main = () => {
   // console.log(data)
   return (
     <div className="main_container">
-      {/* <div className="main_header">
-        <div className="header_left">
-          <h1 className="header_left_title">کافه لوران</h1>
-          <h4 className="header_left_body">
-            بهترین قهوه در انتظار شماست
-          </h4>
-          <div className="header_btn">
-            <button className="header_left_btn">کافه لوران</button>
-          </div>
-        </div>
-      <div className="header_image">
-        <img className="image_header" src="image/mohammad-headerr.jpg" />
-      </div>
-      </div> */}
-      {/* <Courseler /> */}
       <img className="main_image_image" src="/image/main.jpg" alt="" />
       <br />
       <div className="center">
@@ -57,6 +42,7 @@ const Main = () => {
           {newProducts.map((item) => (
             <Link
               className="main_link_product"
+              key={item.name}
               to={`/category/${item.category}`}
             >
               <div
@@ -85,7 +71,6 @@ const Main = () => {
           <Swiper
             slidesPerView={10}
             spaceBetween={1}
-            
             breakpoints={{
               "@0.00": {
                 slidesPerView: 1,
@@ -214,7 +199,7 @@ const Main = () => {
         </div>
         <div className="main_card_body">
           {cardseller.map((item) => (
-            <CardProducts {...item} />
+            <CardProducts {...item} key={item.name} />
           ))}
         </div>
       </div>
