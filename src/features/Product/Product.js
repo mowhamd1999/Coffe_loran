@@ -155,6 +155,9 @@ const Product = () => {
         theme="light"
         transition="Bounce"
       />
+      <div>
+        <p>milad</p>
+      </div>
     </div>
   );
 };

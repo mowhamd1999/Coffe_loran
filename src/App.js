@@ -7,6 +7,7 @@ import Category from "./features/Category/Category";
 import Product from "./features/Product/Product";
 import Aboutus from "./pages/AboutUs/Aboutus";
 import Contactus from "./pages/ContactUs/Contactus";
+//milad
 ///redux
 import store from "./redux/store";
 import { Provider } from "react-redux";
